@@ -43,6 +43,69 @@ if (foodChoice === '1') {
   // Step 3 - Subtype choice
   // Your code goes here
   
+  let subtypeChoice;
+
+// Check the chosen food type (foodChoice) and show the options for each subtype choice
+if (foodChoice === '1') {
+  // Pizza subtype choices
+  subtypeChoice = prompt(
+    `Please select a subtype of Pizza by entering the a number:\n
+    1. Margherita\n
+    2. Pepperoni\n
+    3. Veggie`
+  );
+
+  // Confirm the chosen subtype for Pizza
+  if (subtypeChoice === '1') {
+    alert('You selected Margherita Pizza. Enjoy!');
+  } else if (subtypeChoice === '2') {
+    alert('You selected Pepperoni Pizza. Yummy!');
+  } else if (subtypeChoice === '3') {
+    alert('You selected Veggie Pizza. A healthy choice!');
+  } else {
+    alert('Invalid choice for a Pizza subtype. Please refresh the page and choose a valid option.');
+  }
+} else if (foodChoice === '2') {
+  // Pasta subtype options
+  subtypeChoice = prompt(
+    `Please select a subtype of Pasta by entering the a number:\n
+    1. Spaghetti Carbonara\n
+    2. Fettuccine Alfredo\n
+    3. Pesto Linguine`
+  );
+
+  // Confirm the chosen subtype for Pasta
+  if (subtypeChoice === '1') {
+    alert('You selected Spaghetti Carbonara Pasta. Buon appetito!');
+  } else if (subtypeChoice === '2') {
+    alert('You selected Fettuccine Alfredo Pasta. Delizioso!');
+  } else if (subtypeChoice === '3') {
+    alert('You selected Pesto Linguine Pasta. Tasty choice!');
+  } else {
+    alert('Invalid choice for a Pasta subtype. Please refresh the page and choose a valid option.');
+  }
+} else if (foodChoice === '3') {
+  // Salad subtype options
+  subtypeChoice = prompt(
+    `Please select a subtype of Salad by entering the a number:\n
+    1. Caesar Salad\n
+    2. Greek Salad\n
+    3. Cobb Salad`
+  );
+
+  // Confirm the chosen subtype for Salad
+  if (subtypeChoice === '1') {
+    alert('You selected Caesar Salad. Enjoy your healthy meal!');
+  } else if (subtypeChoice === '2') {
+    alert('You selected Greek Salad. A refreshing choice!');
+  } else if (subtypeChoice === '3') {
+    alert('You selected Cobb Salad. A classic favorite!');
+  } else {
+    alert('Invalid choice for a Salad subtype. Please refresh the page and choose a valid option.');
+  }
+} else {
+  alert('Invalid choice for a food type. Please refresh the page and choose a valid option.');
+}
   
   // Step 4 - Age
   // Your code goes here
