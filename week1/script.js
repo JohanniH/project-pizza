@@ -109,6 +109,34 @@ if (foodChoice === '1') {
   
   // Step 4 - Age
   // Your code goes here
+  // Ask the user if the food is for a child or an adult
+const ageChoice = prompt('Is the food for a child or an adult? (Enter "child" or "adult")');
+
+// Initialize variables
+let orderMessage = '';
+let cost = 0;
+
+// Check the users input and construct the order message and cost
+if (ageChoice.toLowerCase() === 'child') {
+  // Food for a child
+  orderMessage = `You have ordered a ${foodChoice} (${subtypeChoice}) for a child.`;
+  cost = 5;
+} else if (ageChoice.toLowerCase() === 'adult') {
+  // Food for an adult
+  orderMessage = `You have ordered a ${foodChoice} (${subtypeChoice}) for an adult.`;
+  cost = 10;
+} else {
+  // Invalid choice for age
+  alert('Invalid choice for age. Please refresh the page and choose "child" or "adult".');
+}
+
+// Display the order message and cost
+if (orderMessage !== '') {
+  const confirmation = prompt(`${orderMessage} The cost is $${cost}. Confirm your order (yes/no):`);
+} else {
+  // Invalid choice for age
+  alert('Order cannot be completed due to an invalid age choice.');
+}
   
   // Step 5 - Order confirmation
   // Your code goes here
