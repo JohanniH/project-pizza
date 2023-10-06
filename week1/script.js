@@ -21,6 +21,24 @@ alert(`Hi ${userName}!`);
   
   // Step 2 - Food choice
   // Your code goes here
+  // Get the users choice
+const foodChoice = prompt(
+  `Please select a food type by entering the corresponding number:\n
+  1. Pizza\n
+  2. Pasta\n
+  3. Salad`
+);
+
+// Check the users input and display a confirmation message
+if (foodChoice === '1') {
+  alert('You selected Pizza. Enjoy your meal!');
+} else if (foodChoice === '2') {
+  alert('You selected Pasta. Bon appétit!');
+} else if (foodChoice === '3') {
+  alert('You selected Salad. Healthy choice!');
+} else {
+  alert('Invalid choice. Please refresh the page and choose a valid option.');
+}
   
   // Step 3 - Subtype choice
   // Your code goes here
