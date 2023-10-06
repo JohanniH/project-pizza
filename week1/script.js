@@ -21,7 +21,7 @@ if (userName !== null) {
   // Your code goes here
   // Get the users choice
 const foodChoice = prompt(
-  `Please select a food type by entering the a number:\n
+  `Please select a food type by entering a number:\n
   1. Pizza\n
   2. Pasta\n
   3. Salad`
@@ -47,7 +47,7 @@ if (foodChoice === '1') {
 if (foodChoice === '1') {
   // Pizza subtype choices
   subtypeChoice = prompt(
-    `Please select a subtype of Pizza by entering the a number:\n
+    `Please select a subtype of Pizza by entering a number:\n
     1. Margherita\n
     2. Pepperoni\n
     3. Veggie`
@@ -66,7 +66,7 @@ if (foodChoice === '1') {
 } else if (foodChoice === '2') {
   // Pasta subtype options
   subtypeChoice = prompt(
-    `Please select a subtype of Pasta by entering the a number:\n
+    `Please select a subtype of Pasta by entering a number:\n
     1. Spaghetti Carbonara\n
     2. Fettuccine Alfredo\n
     3. Pesto Linguine`
@@ -85,7 +85,7 @@ if (foodChoice === '1') {
 } else if (foodChoice === '3') {
   // Salad subtype options
   subtypeChoice = prompt(
-    `Please select a subtype of Salad by entering the a number:\n
+    `Please select a subtype of Salad by entering a number:\n
     1. Caesar Salad\n
     2. Greek Salad\n
     3. Cobb Salad`
@@ -130,12 +130,6 @@ if (ageChoice.toLowerCase() === 'child') {
 
 // Display the order message and cost
 const confirmation = prompt(`${orderMessage} The cost is $${cost}. Confirm your order (yes/no):`);
-if (orderMessage !== '') {
-  
-} else {
-  // Invalid choice
-  alert('Invalid choice. Please refresh the page and choose a valid option.');
-}
   
   // Step 5 - Order confirmation
   // Your code goes here
