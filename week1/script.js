@@ -16,14 +16,12 @@ if (userName !== null) {
   // If user canceled the prompt
   alert("You didn't provide a name. Please refresh the page to try again.");
 }
-// Greet the user
-alert(`Hi ${userName}!`);
-  
+ 
   // Step 2 - Food choice
   // Your code goes here
   // Get the users choice
 const foodChoice = prompt(
-  `Please select a food type by entering the corresponding number:\n
+  `Please select a food type by entering the a number:\n
   1. Pizza\n
   2. Pasta\n
   3. Salad`
@@ -131,12 +129,21 @@ if (ageChoice.toLowerCase() === 'child') {
 }
 
 // Display the order message and cost
+const confirmation = prompt(`${orderMessage} The cost is $${cost}. Confirm your order (yes/no):`);
 if (orderMessage !== '') {
-  const confirmation = prompt(`${orderMessage} The cost is $${cost}. Confirm your order (yes/no):`);
+  
 } else {
-  // Invalid choice for age
-  alert('Order cannot be completed due to an invalid age choice.');
+  // Invalid choice
+  alert('Invalid choice. Please refresh the page and choose a valid option.');
 }
   
   // Step 5 - Order confirmation
   // Your code goes here
+  // Check if the user confirmed the order
+  if (confirmation.toLowerCase() === 'yes') {
+    alert('Order confirmed! Your meal will be prepared. Thank you for choosing our pizzeria!');
+  } else if (confirmation.toLowerCase() === 'no') {
+    alert('Order canceled. Thank you for considering our pizzeria. We hope to serve you in the future!');
+  } else {
+    alert('Invalid confirmation choice. Your order status is not confirmed. Please contact our customer service.');
+  }
