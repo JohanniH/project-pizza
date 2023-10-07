@@ -127,7 +127,6 @@ if (ageChoice.toLowerCase() === 'child') {
   // Invalid choice for age
   alert('Invalid choice for age. Please refresh the page and choose "child" or "adult".');
 }
-
 // Display the order message and cost
 const confirmation = prompt(`${orderMessage} The cost is $${cost}. Confirm your order (yes/no):`);
   

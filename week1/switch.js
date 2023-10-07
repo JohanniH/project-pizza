@@ -1,4 +1,4 @@
-// Ask for the users name
+// Ask for the user's name
 const userName = prompt("Welcome to our Javascript Pizzeria. Please enter your name:");
 
 // Check if the user provided a name
@@ -9,14 +9,14 @@ if (userName !== null) {
   throw new Error("Name not provided"); // Terminate script
 }
 
-// Get the users choice
+// Get the user's choice
 const foodChoice = prompt(`Please select a food type by entering a number:\n
   1. Pizza\n
   2. Pasta\n
   3. Salad`);
 
 // Variables
-let subtype= '';
+let subtype = ''; // Declare subtype here
 let orderMessage = '';
 let cost = 0;
 
@@ -24,12 +24,12 @@ let cost = 0;
 switch (foodChoice) {
   case '1':
     // Pizza subtype options
-    const pizzaSubtype = prompt(`Please select a subtype of Pizza by entering a number:\n
+    subtype = prompt(`Please select a subtype of Pizza by entering a number:\n
       1. Margherita\n
       2. Pepperoni\n
       3. Veggie`);
     
-    switch (pizzaSubtype) {
+    switch (subtype) {
       case '1':
         alert('You selected Margherita Pizza. Enjoy!');
         break;
@@ -41,17 +41,17 @@ switch (foodChoice) {
         break;
       default:
         alert('Invalid choice for Pizza subtype. Please refresh the page and choose a valid option.');
-        throw new Error("Name not provided"); // Terminate script
+        throw new Error("Invalid choice for Pizza subtype"); // Terminate script
     }
     break;
   case '2':
     // Pasta subtype options
-    const pastaSubtype = prompt(`Please select a subtype of Pasta by entering a number:\n
+    subtype = prompt(`Please select a subtype of Pasta by entering a number:\n
       1. Spaghetti Carbonara\n
       2. Fettuccine Alfredo\n
       3. Pesto Linguine`);
     
-    switch (pastaSubtype) {
+    switch (subtype) {
       case '1':
         alert('You selected Spaghetti Carbonara Pasta. Buon appetito!');
         break;
@@ -63,17 +63,17 @@ switch (foodChoice) {
         break;
       default:
         alert('Invalid choice for Pasta subtype. Please refresh the page and choose a valid option.');
-        throw new Error("Name not provided"); // Terminate script
+        throw new Error("Invalid choice for Pasta subtype"); // Terminate script
     }
     break;
   case '3':
     // Salad subtype options
-    const saladSubtype = prompt(`Please select a subtype of Salad by entering a number:\n
+    subtype = prompt(`Please select a subtype of Salad by entering a number:\n
       1. Caesar Salad\n
       2. Greek Salad\n
       3. Cobb Salad`);
     
-    switch (saladSubtype) {
+    switch (subtype) {
       case '1':
         alert('You selected Caesar Salad. Enjoy your healthy meal!');
         break;
@@ -85,45 +85,44 @@ switch (foodChoice) {
         break;
       default:
         alert('Invalid choice for Salad subtype. Please refresh the page and choose a valid option.');
-        throw new Error("Name not provided"); // Terminate script
+        throw new Error("Invalid choice for Salad subtype"); // Terminate script
     }
     break;
   default:
     alert('Invalid choice for food type. Please refresh the page and choose a valid option.');
-    throw new Error("Name not provided"); // Terminate script
+    throw new Error("Invalid choice for food type"); // Terminate script
 }
 
-// Ask the user for the age
+// Ask the user for the intended age
 const ageChoice = prompt('Is the food for a child or an adult? (Enter "child" or "adult")');
 
 // Switch statement for age
 switch (ageChoice.toLowerCase()) {
   case 'child':
     // Food for a child
-    orderMessage = `You have ordered a ${foodChoice} (${pizzaSubtype || pastaSubtype || saladSubtype}) for a child.`;
+    orderMessage = `You have ordered a ${foodChoice} (${subtype}) for a child.`;
     cost = 5;
     break;
   case 'adult':
     // Food for an adult
-    orderMessage = `You have ordered a ${foodChoice} (${pizzaSubtype || pastaSubtype || saladSubtype}) for an adult.`;
+    orderMessage = `You have ordered a ${foodChoice} (${subtype}) for an adult.`;
     cost = 10;
     break;
   default:
     // Invalid choice for age
     alert('Invalid choice for age. Please refresh the page and choose "child" or "adult".');
-    throw new Error("Name not provided"); // Terminate script
+    throw new Error("Invalid choice for age"); // Terminate script
 }
 
-// Display the order message and cost
-    const confirmation = prompt(`${orderMessage} The cost is $${cost}. Confirm your order (yes/no):`);
-  switch (confirmation.toLowerCase()) {
-    case 'yes':
-      alert('Order confirmed! Your meal will be prepared. Thank you for choosing our pizzeria!');
-      break;
-    case 'no':
-      alert('Order canceled. Thank you for considering our pizzeria. We hope to serve you in the future!');
-      break;
-    default:
-      alert('Invalid confirmation choice. Your order status is not confirmed. Please contact our customer service.');
-  }
-
+// Display the order message and associated cost
+const confirmation = prompt(`${orderMessage} The cost is $${cost}. Confirm your order (yes/no):`);
+switch (confirmation.toLowerCase()) {
+  case 'yes':
+    alert('Order confirmed! Your meal will be prepared. Thank you for choosing our pizzeria!');
+    break;
+  case 'no':
+    alert('Order canceled. Thank you for considering our pizzeria. We hope to serve you in the future!');
+    break;
+  default:
+    alert('Invalid confirmation choice. Your order status is not confirmed. Please contact our customer service.');
+}
